@@ -1,14 +1,16 @@
 # HISTORY
 
-## 0.1.0 | 2026-11-24
+## 0.2.0 | 2026-11-24
 
 Spectrum brings three test frameworks together as one library of test
 structures: Citron (test cases), Spectroscope (specifications) and Lime
 (features). Each is loaded on its own, and all run on Rubytest. Spectrum
 needs Ruby 2.7 or newer.
 
-The gem named `spectrum` 0.0.1 (2012) was an unrelated colour library, a
-copy of the `color` gem; this release shares nothing with it but the name.
+The gem named `spectrum` was an unrelated colour library in 2012, a copy
+of the `color` gem, released as 0.0.1 and 0.1.0 (since yanked). This
+release shares nothing with it but the name, and starts at 0.2.0 because
+those numbers are taken.
 
 Changes from the separate gems:
 
