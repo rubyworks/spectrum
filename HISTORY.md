@@ -2,18 +2,18 @@
 
 ## Unreleased
 
-Cupel brings three test frameworks together as one library of test
+Spectrum brings three test frameworks together as one library of test
 structures: Citron (test cases), Spectroscope (specifications) and Lime
-(features). Each is loaded on its own, and all run on Rubytest. Cupel
+(features). Each is loaded on its own, and all run on Rubytest. Spectrum
 needs Ruby 2.7 or newer.
 
 Changes from the separate gems:
 
-* `require 'cupel/testcase'` in place of `citron`, `cupel/spec` in place
-  of `spectroscope`, `cupel/feature` in place of `lime`. The classes are
-  `Cupel::TestCase`, `Cupel::Spec::Context` and `Example`, and
-  `Cupel::Feature`; a featurette includes `Cupel::Featurette`.
-* `Cupel::World` is one module for all three. A method defined in it is
+* `require 'spectrum/testcase'` in place of `citron`, `spectrum/describe` in place
+  of `spectroscope`, `spectrum/feature` in place of `lime`. The classes are
+  `Spectrum::TestCase`, `Spectrum::Spec::Context` and `Example`, and
+  `Spectrum::Feature`; a featurette includes `Spectrum::Featurette`.
+* `Spectrum::World` is one module for all three. A method defined in it is
   available inside every test, example and step.
 * No assertion library is required or assumed.
 

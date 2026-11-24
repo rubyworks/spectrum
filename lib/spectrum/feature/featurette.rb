@@ -1,11 +1,11 @@
-module Cupel
+module Spectrum
 
   # A featurette is a module of step definitions that features can share.
   #
   # @example
   #
   #   module MyStepDefinitions
-  #     include Cupel::Featurette
+  #     include Spectrum::Featurette
   #
   #     Given "customer's name is '(\w+)'" do |name|
   #       @name = name

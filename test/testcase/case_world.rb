@@ -1,4 +1,4 @@
-testcase "Cupel::World" do
+testcase "Spectrum::World" do
 
   test "helpers are available in a test" do
     world_helper.assert == "helped by the world"

@@ -1,4 +1,4 @@
-module Cupel
+module Spectrum
   module Spec
 
     # This is the BDD form of a test case. It encapsulates a collection
@@ -381,7 +381,7 @@ module Cupel
         # Bring in a set of shared examples.
         #
         def it_behaves_like(label)
-          proc = Cupel::Spec.shared_examples[label]
+          proc = Spectrum::Spec.shared_examples[label]
           raise ArgumentError, "no shared examples for #{label.inspect}" unless proc
           module_eval(&proc)
         end

@@ -1,4 +1,4 @@
-module Cupel
+module Spectrum
   class Feature
 
     # A scenario is a list of steps, run in order in a scope of their
@@ -26,7 +26,7 @@ module Cupel
       attr :steps
 
       # The object the scenario's step definitions run in. It has the
-      # helper methods of the feature and of Cupel::World.
+      # helper methods of the feature and of Spectrum::World.
       def scope
         @scope ||= (
           scope = Object.new

@@ -1,24 +1,24 @@
-# Cupel
+# Spectrum
 
-[Source Code](https://github.com/rubyworks/cupel) /
-[Report Issue](https://github.com/rubyworks/cupel/issues)
+[Source Code](https://github.com/rubyworks/spectrum) /
+[Report Issue](https://github.com/rubyworks/spectrum/issues)
 
-Cupel is a library of test structures: the words that organize tests
+Spectrum is a library of test structures: the words that organize tests
 into cases, specifications or features. Pick the one you like to write
 in; each is loaded on its own.
 
 | Require | Structure |
 |---|---|
-| `cupel/testcase` | `TestCase "..." do`, `test "..." do`, `setup`, `teardown` |
-| `cupel/spec` | `describe "..." do`, `it "..." do`, `before`, `after`, `let` |
-| `cupel/feature` | `Feature "..." do`, `Scenario "..." do`, `Given`, `When`, `Then` |
+| `spectrum/testcase` | `TestCase "..." do`, `test "..." do`, `setup`, `teardown` |
+| `spectrum/describe` | `describe "..." do`, `it "..." do`, `before`, `after`, `let` |
+| `spectrum/feature` | `Feature "..." do`, `Scenario "..." do`, `Given`, `When`, `Then` |
 
-Cupel does two things and leaves the rest to others:
+Spectrum does two things and leaves the rest to others:
 
 * **Running** is done by [Rubytest](https://github.com/rubyworks/rubytest).
   Every structure builds test objects that Rubytest understands, so its
   command line, report formats and filters work with all of them.
-* **Asserting** is left to an assertion library. Cupel is the
+* **Asserting** is left to an assertion library. Spectrum is the
   counterpart of [Assay](https://github.com/rubyworks/assay), which
   offers a choice of assertion notations in the same way, but anything
   that raises an assertion Rubytest recognizes will do.
@@ -27,8 +27,8 @@ So a project chooses one of each:
 
 ```ruby
 # test/helper.rb
-require 'cupel/spec'        # how tests are organized
-require 'assay/ae/should'   # how they assert
+require 'spectrum/describe'    # how tests are organized
+require 'assay/ae/should'      # how they assert
 ```
 
     $ rubytest -Ilib -r ./test/helper test/*_spec.rb
@@ -39,7 +39,7 @@ The examples below use Assay's AE notation.
 ## Test cases
 
 ```ruby
-require 'cupel/testcase'
+require 'spectrum/testcase'
 
 TestCase Array do
 
@@ -93,7 +93,7 @@ end
 ## Specifications
 
 ```ruby
-require 'cupel/spec'
+require 'spectrum/describe'
 
 describe Array do
 
@@ -148,7 +148,7 @@ end
 ## Features
 
 ```ruby
-require 'cupel/feature'
+require 'spectrum/feature'
 
 Feature "Addition" do
   To "avoid silly mistakes"
@@ -189,11 +189,11 @@ is a regular expression, and what it matches is passed to the block.
 * `skip "reason"` skips the scenario that follows.
 
 Step definitions can be shared between features by putting them in a
-module that includes `Cupel::Featurette`:
+module that includes `Spectrum::Featurette`:
 
 ```ruby
 module CalculatorSteps
-  include Cupel::Featurette
+  include Spectrum::Featurette
 
   When 'I press add' do
     @result = @calculator.add
@@ -212,11 +212,11 @@ automatically.
 
 ## Helpers for every test
 
-A method defined in `Cupel::World` is available inside every test,
+A method defined in `Spectrum::World` is available inside every test,
 example and step, whichever structure it is written in.
 
 ```ruby
-module Cupel::World
+module Spectrum::World
   def fixture(name)
     File.read("test/fixtures/#{name}")
   end
@@ -226,13 +226,13 @@ end
 
 ## Where it came from
 
-Cupel combines three earlier gems, which it replaces:
+Spectrum combines three earlier gems, which it replaces:
 
 | Before | Now |
 |---|---|
-| gem `citron`, `require 'citron'` | `require 'cupel/testcase'` |
-| gem `spectroscope`, `require 'spectroscope'` | `require 'cupel/spec'` |
-| gem `lime`, `require 'lime'` | `require 'cupel/feature'` |
+| gem `citron`, `require 'citron'` | `require 'spectrum/testcase'` |
+| gem `spectroscope`, `require 'spectroscope'` | `require 'spectrum/describe'` |
+| gem `lime`, `require 'lime'` | `require 'spectrum/feature'` |
 
 The words are the same. What changed is listed in
 [HISTORY.md](HISTORY.md); in short, several things that silently did
@@ -244,12 +244,12 @@ framework, is a separate gem and also runs on Rubytest.
 
 ## Installation
 
-    $ gem install cupel
+    $ gem install spectrum
 
 
 ## License & Copyright
 
 Copyright (c) 2011 Rubyworks
 
-Cupel is distributed under the terms of the BSD-2-Clause license. See
+Spectrum is distributed under the terms of the BSD-2-Clause license. See
 LICENSE.txt for details.

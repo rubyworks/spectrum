@@ -1,8 +1,8 @@
-require_relative '../cupel'
+require_relative '../spectrum'
 require_relative 'testcase/test_proc'
 require_relative 'testcase/test_case'
 
-module Cupel
+module Spectrum
 
   class TestCase
 
@@ -12,7 +12,7 @@ module Cupel
       # Define a general test case.
       #
       def test_case(label, *tags, &block)
-        testcase = Cupel::TestCase.context(label, *tags, &block)
+        testcase = Spectrum::TestCase.context(label, *tags, &block)
         $TEST_SUITE << testcase.new
         testcase
       end
@@ -25,4 +25,4 @@ module Cupel
 
 end
 
-extend Cupel::TestCase::DSL
+extend Spectrum::TestCase::DSL

@@ -1,4 +1,4 @@
-module Cupel
+module Spectrum
 
   # Features contain scenarios, and the step definitions the scenarios
   # are run by: the _given_, _when_ and _then_ procedures.

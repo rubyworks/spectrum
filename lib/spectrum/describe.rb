@@ -1,6 +1,6 @@
-require_relative '../cupel'
+require_relative '../spectrum'
 
-module Cupel
+module Spectrum
 
   # The specification structure: `describe` and `it`.
   #
@@ -23,7 +23,7 @@ module Cupel
         else
           settings[:label]   = topic
         end
-        context = Cupel::Spec::Context.new(settings, &block)
+        context = Spectrum::Spec::Context.new(settings, &block)
         $TEST_SUITE << context
         context
       end
@@ -33,7 +33,7 @@ module Cupel
       # with `it_behaves_like`.
       #
       def shared_examples_for(label, &block)
-        Cupel::Spec.shared_examples[label] = block
+        Spectrum::Spec.shared_examples[label] = block
       end
 
       alias :shared_examples :shared_examples_for
@@ -52,4 +52,4 @@ module Cupel
 
 end
 
-extend Cupel::Spec::DSL
+extend Spectrum::Spec::DSL

@@ -1,11 +1,11 @@
-require_relative '../cupel'
+require_relative '../spectrum'
 require_relative 'feature/advice'
 require_relative 'feature/step'
 require_relative 'feature/scenario'
 require_relative 'feature/featurette'
 require_relative 'feature/feature'
 
-module Cupel
+module Spectrum
 
   class Feature
 
@@ -18,7 +18,7 @@ module Cupel
       def Feature(label, &block)
         location = caller_locations(1,1).first
         require_featurettes(File.dirname(location.absolute_path || location.path))
-        feature = Cupel::Feature.new(:label=>label, &block)
+        feature = Spectrum::Feature.new(:label=>label, &block)
         $TEST_SUITE << feature
         feature
       end
@@ -42,4 +42,4 @@ module Cupel
 
 end
 
-extend Cupel::Feature::DSL
+extend Spectrum::Feature::DSL

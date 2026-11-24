@@ -4,7 +4,7 @@
 require 'assay/ae'
 require 'assay/ae/should'
 
-module Cupel::World
+module Spectrum::World
   def world_helper
     "helped by the world"
   end

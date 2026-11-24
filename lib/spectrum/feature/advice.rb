@@ -1,4 +1,4 @@
-module Cupel
+module Spectrum
   class Feature
 
     # The step definitions of a feature: for each of `given`, `when` and

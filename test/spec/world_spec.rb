@@ -1,4 +1,4 @@
-describe "Cupel::World" do
+describe "Spectrum::World" do
 
   it "gives its helpers to an example" do
     world_helper.should == "helped by the world"

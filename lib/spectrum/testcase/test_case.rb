@@ -1,4 +1,4 @@
-module Cupel
+module Spectrum
 
   # A test case is a collection of tests, which can be organized into
   # groups of contexts. Each test case, and each context, is a subclass
@@ -107,7 +107,7 @@ module Cupel
           &block
         )
 
-        self << context unless equal?(Cupel::TestCase)
+        self << context unless equal?(Spectrum::TestCase)
 
         context
       end

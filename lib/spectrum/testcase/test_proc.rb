@@ -1,4 +1,4 @@
-module Cupel
+module Spectrum
 
   class TestCase
 

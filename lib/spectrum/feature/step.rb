@@ -1,4 +1,4 @@
-module Cupel
+module Spectrum
   class Feature
 
     # A step of a scenario: one `Given`, `When` or `Then` line. To

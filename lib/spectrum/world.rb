@@ -1,9 +1,9 @@
-module Cupel
+module Spectrum
 
-  # Methods defined in Cupel::World are available inside every test,
+  # Methods defined in Spectrum::World are available inside every test,
   # whichever structure it is written in.
   #
-  #   module Cupel::World
+  #   module Spectrum::World
   #     def fixture(name)
   #       File.read("test/fixtures/#{name}")
   #     end

@@ -1,4 +1,4 @@
-describe Cupel::Spec::Context::Scope do
+describe Spectrum::Spec::Context::Scope do
 
   describe "#let" do
     count = 0

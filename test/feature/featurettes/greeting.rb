@@ -2,7 +2,7 @@
 # the features.
 
 module GreetingSteps
-  include Cupel::Featurette
+  include Spectrum::Featurette
 
   Given "a person named (\\w+)" do |name|
     @name = name
